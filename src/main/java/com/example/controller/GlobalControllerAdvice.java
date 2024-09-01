@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-public class GlobalControllAdvice {
+public class GlobalControllerAdvice {
 
 	/* データベース関連の例外処理 */
 	@ExceptionHandler(DataAccessException.class)
@@ -27,7 +27,7 @@ public class GlobalControllAdvice {
 	
 	/* その他の例外処理 */
 	@ExceptionHandler(Exception.class)
-	public String exeptionHandler(Exception e, Model model) {
+	public String exceptionHandler(Exception e, Model model) {
 		
 		// 空文字をセット
 		model.addAttribute("error", "");

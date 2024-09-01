@@ -28,9 +28,9 @@ public class TestController {
 	/**
 	 * indexパスにアクセスしたときに呼ばれるメソッド
 	 * index.htmlを表示する
-	 * http://localhost:8080/indexにアクセスする
-	 * @param model
-	 * @return
+	 * localhost:8080/indexにアクセスする
+	 * @param model -
+	 * @return -
 	 */
     @GetMapping("/index")
     public String index(Model model) {
