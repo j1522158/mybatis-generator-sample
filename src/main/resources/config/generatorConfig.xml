@@ -18,10 +18,10 @@
             <property name="useJSR310Types" value="true" />
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.example.mbgenerator_test.mbgenerator.modelgen"
+        <javaModelGenerator targetPackage="com.example.mbgenerator.modelgen"
                             targetProject="./src/main/java"/>
 
-        <javaClientGenerator targetPackage="com.example.mbgenerator_test.mbgenerator.mappergen"
+        <javaClientGenerator targetPackage="com.example.mbgenerator.mappergen"
                              targetProject="./src/main/java"/>
 
         <table tableName="%"/>

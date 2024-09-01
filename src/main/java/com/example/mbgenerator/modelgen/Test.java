@@ -1,4 +1,4 @@
-package com.example.mbgenerator_test.mbgenerator.modelgen;
+package com.example.mbgenerator.modelgen;
 
 import jakarta.annotation.Generated;
 

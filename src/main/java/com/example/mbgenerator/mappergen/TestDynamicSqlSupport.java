@@ -1,4 +1,4 @@
-package com.example.mbgenerator_test.mbgenerator.mappergen;
+package com.example.mbgenerator.mappergen;
 
 import jakarta.annotation.Generated;
 import java.sql.JDBCType;

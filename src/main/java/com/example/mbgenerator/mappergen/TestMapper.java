@@ -1,9 +1,9 @@
-package com.example.mbgenerator_test.mbgenerator.mappergen;
+package com.example.mbgenerator.mappergen;
 
-import static com.example.mbgenerator_test.mbgenerator.mappergen.TestDynamicSqlSupport.*;
+import static com.example.mbgenerator.mappergen.TestDynamicSqlSupport.*;
 import static org.mybatis.dynamic.sql.SqlBuilder.isEqualTo;
 
-import com.example.mbgenerator_test.mbgenerator.modelgen.Test;
+import com.example.mbgenerator.modelgen.Test;
 import jakarta.annotation.Generated;
 import java.util.Collection;
 import java.util.List;

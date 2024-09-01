@@ -1,9 +1,9 @@
-package com.example.mbgenerator_test.mbgenerator.mappergen;
+package com.example.mbgenerator.mappergen;
 
-import static com.example.mbgenerator_test.mbgenerator.mappergen.ItemDynamicSqlSupport.*;
+import static com.example.mbgenerator.mappergen.ItemDynamicSqlSupport.*;
 import static org.mybatis.dynamic.sql.SqlBuilder.isEqualTo;
 
-import com.example.mbgenerator_test.mbgenerator.modelgen.Item;
+import com.example.mbgenerator.modelgen.Item;
 import jakarta.annotation.Generated;
 import java.util.Collection;
 import java.util.List;
@@ -31,10 +31,10 @@ import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
 
 @Mapper
 public interface ItemMapper extends CommonCountMapper, CommonDeleteMapper, CommonInsertMapper<Item>, CommonUpdateMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     BasicColumn[] selectList = BasicColumn.columnList(id, name, price);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="ItemResult", value = {
         @Result(column="id", property="id", jdbcType=JdbcType.INTEGER, id=true),
@@ -43,29 +43,29 @@ public interface ItemMapper extends CommonCountMapper, CommonDeleteMapper, Commo
     })
     List<Item> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("ItemResult")
     Optional<Item> selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     default long count(CountDSLCompleter completer) {
         return MyBatis3Utils.countFrom(this::count, item, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     default int delete(DeleteDSLCompleter completer) {
         return MyBatis3Utils.deleteFrom(this::delete, item, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     default int deleteByPrimaryKey(Integer id_) {
         return delete(c -> 
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     default int insert(Item row) {
         return MyBatis3Utils.insert(this::insert, row, item, c ->
             c.map(id).toProperty("id")
@@ -74,7 +74,7 @@ public interface ItemMapper extends CommonCountMapper, CommonDeleteMapper, Commo
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     default int insertMultiple(Collection<Item> records) {
         return MyBatis3Utils.insertMultiple(this::insertMultiple, records, item, c ->
             c.map(id).toProperty("id")
@@ -83,7 +83,7 @@ public interface ItemMapper extends CommonCountMapper, CommonDeleteMapper, Commo
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     default int insertSelective(Item row) {
         return MyBatis3Utils.insert(this::insert, row, item, c ->
             c.map(id).toPropertyWhenPresent("id", row::getId)
@@ -92,48 +92,48 @@ public interface ItemMapper extends CommonCountMapper, CommonDeleteMapper, Commo
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     default Optional<Item> selectOne(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectOne(this::selectOne, selectList, item, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     default List<Item> select(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectList(this::selectMany, selectList, item, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     default List<Item> selectDistinct(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectDistinct(this::selectMany, selectList, item, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     default Optional<Item> selectByPrimaryKey(Integer id_) {
         return selectOne(c ->
             c.where(id, isEqualTo(id_))
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     default int update(UpdateDSLCompleter completer) {
         return MyBatis3Utils.update(this::update, item, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     static UpdateDSL<UpdateModel> updateAllColumns(Item row, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(id).equalTo(row::getId)
                 .set(name).equalTo(row::getName)
                 .set(price).equalTo(row::getPrice);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     static UpdateDSL<UpdateModel> updateSelectiveColumns(Item row, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(id).equalToWhenPresent(row::getId)
                 .set(name).equalToWhenPresent(row::getName)
                 .set(price).equalToWhenPresent(row::getPrice);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     default int updateByPrimaryKey(Item row) {
         return update(c ->
             c.set(name).equalTo(row::getName)
@@ -142,7 +142,7 @@ public interface ItemMapper extends CommonCountMapper, CommonDeleteMapper, Commo
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: Item")
     default int updateByPrimaryKeySelective(Item row) {
         return update(c ->
             c.set(name).equalToWhenPresent(row::getName)

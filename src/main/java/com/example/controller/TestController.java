@@ -6,8 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.mbgenerator_test.mbgenerator.mappergen.ItemMapper;
-import com.example.mbgenerator_test.mbgenerator.modelgen.Item;
+import com.example.mbgenerator.mappergen.ItemMapper;
+import com.example.mbgenerator.modelgen.Item;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
