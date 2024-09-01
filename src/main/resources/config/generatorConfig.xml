@@ -8,9 +8,9 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/スキーマ名"
-                        userId="ユーザ名"
-                        password="パスワード">
+                        connectionURL="jdbc:mysql://localhost:3306/mybatis_generator"
+                        userId="root"
+                        password="New_Strong_Password123!">
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
 
